@@ -1,7 +1,11 @@
-import connectDB from "../../db.js";
+import { NextApiRequest, NextApiResponse } from "next";
+import connectDB from "../../db";
 import Recipe from "../../models/Recipe";
 
-export default async function handler(req, res) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Método não permitido" });
   }
@@ -39,7 +43,7 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Erro ao adicionar receita:", error);
     return res
-      .status(200)
+      .status(500)
       .json({ success: false, message: "Erro interno do servidor" });
   }
 }
