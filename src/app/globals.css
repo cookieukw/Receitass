@@ -1,18 +1,11 @@
-* {
-  box-sizing: border-box !important;
-  padding: 0;
-  margin: 0;
-  box-shadow: none ;
-
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+*u {
+    box-sizing: border-box !important;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
